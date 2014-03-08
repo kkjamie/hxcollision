@@ -23,6 +23,17 @@ class Matrix #if cpp implements cpp.rtti.FieldNumericIntegerLookup #end {
 		this.ty = ty;
 		
 	} //new
+
+    /* Reverts back to identiry matrix */
+    public function revert():Void
+    {
+        a  = 1;
+        b  = 0;
+        c  = 0;
+        d  = 1;
+        tx = 0;
+        ty = 0;
+    }
 	
 	public function translate (x:Float, y:Float):Void {
 		

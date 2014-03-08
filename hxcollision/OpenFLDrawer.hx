@@ -1,5 +1,6 @@
 package hxcollision;
 
+import hxcollision.shapes.ConcavePolygon;
 import flash.display.Graphics;
 
 import hxcollision.shapes.Circle;
@@ -34,5 +35,14 @@ class OpenFLDrawer extends ShapeDrawer {
         } //graphics != null
 
     } //drawCircle
+
+    public function drawConcavePolygon(poly:ConcavePolygon){
+        if(graphics != null) {
+            poly.transformChildren();
+            for (p in poly.polygons){
+                drawPolygon(p);
+            }
+        } //graphics != null
+    }
 
 } //OpenFLDrawer
